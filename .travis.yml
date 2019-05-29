@@ -1,5 +1,12 @@
-  language: node_js
-  node_js: node
-  cache:
-    directories:
-      - node_modules
+language: node_js
+node_js: node
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: JZQu0DeCMZff+QY0IjhrCkODd11G0NcRYfjO+IeQ49yJlexh6iua38nD87N1zl25I6Wgq6EjFz7aybJSwQKpt3Xjjmg1jR3I1tYSnLXrKvXslNUx5WTxvXk+RyK3Pzh2XE7sorms5JnzHn/lFCq1O19E0uLCpk4DSHOiM7ETgs9exE7x1HpvBo7A6cE/Atn4w3Urp+uARPfIooBDuLNhX1c2Nn70HztGMB5GRQ8UAeckFpFCojorsJdVJjnDCbPgcBAc9+J/iGbY09f4xUllW9Rcoh/KRHXOdDVHQ5ma/sR/hITXEV6RO142Hc5yIbLz0/L0R5FR0PapG2kEwZWXOhgxy0+FljF3fUen1ypp1Psc+FKSlV7MjdeF6HWFc9QgdO8s5GZ1ru10cLF4qUIwupO3WcSedUIvX7tHsSnOXbRzJRwQQQQ/k9RLz3b6qcYvsVYLUNjju0f6+hoQ5HN2rKc7L0IArSf9xaM2bztS6oAjpvFvbUOch7TcFOQqecdbRX0O5UFDxjdh5XiLDMbz+M9rZnDfAjcNknlwi1uvAKpCWzUzvv+iLaxdTelm6RdHAbxW+ZxJ4Wq4CbpMVjjT8U8Xo/r9ajTD4ZZE+pdqtxWrdSjq8pLt6tN/0SijDaSJSHb84jeaQ+jAAgICnUv33FX9SEiTjTkZp9OGGMyFPAQ=
+  app: mighty-fortress-82471
+  on:
+    repo: AaronDovTurkel/the-poem-pocket-client
