@@ -1,0 +1,38 @@
+.site-info-container {
+    height: 100%;
+    width: 95%;
+    justify-self: center;
+    align-self: stretch;
+    display: grid;
+    grid-template-rows: 80% 10% 10%;
+}
+
+.info-content {
+    grid-row: 1 / 2;
+    overflow: scroll;
+    justify-self: stretch;
+    align-self: stretch;
+    display: grid;
+    font-size: 3.8vh;
+    grid-gap: space-around;
+    height: 100%;
+}
+
+
+.register-link {
+    align-self: center;
+    grid-row: 2 / 3;
+}
+
+.register-link > a {
+    font-size: 4.3vh;
+}
+
+.log-in-link {
+    grid-row: 3 / 4;
+    font-size: 3vh;
+}
+
+.log-in-link > a {
+    font-size: 4.2vh;
+}
