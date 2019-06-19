@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'East Sea Dokdo';
+  font-family: 'Indie Flower', cursive;
 }
 
 html {
@@ -43,8 +43,13 @@ h2 {
 
 ul {
 padding: 0;
-margin-bottom: 0;
+margin: 0;
 list-style-type: none;
+}
+
+li {
+  padding: 0;
+  margin: 0;
 }
 
 a {

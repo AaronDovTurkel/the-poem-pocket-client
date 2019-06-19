@@ -19,7 +19,7 @@ export class RegistrationForm extends React.Component {
     render() {
         return (
             <form
-                className="login-form"
+                className="registration-form"
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}>
@@ -51,7 +51,7 @@ export class RegistrationForm extends React.Component {
                 <button
                     type="submit"
                     disabled={this.props.pristine || this.props.submitting}>
-                    Submit
+                    Register
                 </button>
             </form>
         );
@@ -60,6 +60,8 @@ export class RegistrationForm extends React.Component {
 
 export default reduxForm({
     form: 'registration',
-    onSubmitFail: (errors, dispatch) =>
-        dispatch(focus('registration', Object.keys(errors)[0]))
+    onSubmitFail: (errors, dispatch) => {
+        dispatch(focus('registration', Object.keys(errors)[0]));
+        alert(Object.values(errors)[0]);
+    }
 })(RegistrationForm);

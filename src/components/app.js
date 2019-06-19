@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Route, withRouter} from 'react-router-dom';
+import {BrowserRouter as Router, Route, withRouter} from 'react-router-dom';
 
 import HeaderBar from './header-bar';
 import SiteInfo from './site-info';
@@ -43,15 +43,17 @@ export class App extends React.Component {
 
     render() {
         return (
-            <div className="app">
-                <header><HeaderBar /></header>
-                <main>
-                    <Route exact path="/" component={SiteInfo} />
-                    <Route exact path="/landing" component={LandingPage} />
-                    <Route exact path="/dashboard" component={Dashboard} />
-                    <Route exact path="/register" component={RegistrationPage} />
-                </main>
-            </div>
+            <Router>
+                <div className="app">
+                    <header><HeaderBar /></header>
+                    <main>
+                        <Route exact path="/" component={SiteInfo} />
+                        <Route exact path="/landing" component={LandingPage} />
+                        <Route exact path="/dashboard" component={Dashboard} />
+                        <Route exact path="/register" component={RegistrationPage} />
+                    </main>
+                </div>
+            </Router>
         );
     }
 }

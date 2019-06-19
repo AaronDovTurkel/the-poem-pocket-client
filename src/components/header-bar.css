@@ -1,0 +1,103 @@
+.header-bar {
+    justify-self: stretch;
+    align-self: start;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 
+        ". a .";
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.header-bar a {
+    font-size: calc(4vw + 3vh + 2vmin);
+    grid-area: a;
+    justify-self: center;
+    align-self: center;
+}
+
+.info-bar {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-row-gap: calc(4vh + 5vw + 2vmin);
+    position: fixed;
+    right: 0px;
+    top: 0px;
+}
+
+.profile_img_current {
+    grid-row: 1 / 2;
+    height: calc(4vh + 4vw + 1vmin);
+    width: auto;
+    justify-self: center;
+    align-self: center;
+    border-radius: 100% 0% 0% 100% / 100% 100% 0% 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: rgba(12, 11, 12, 0.6);
+}
+
+.clicked {
+    border: rgba(201, 57, 214, 0.753) 1px solid;
+}
+
+.profile_img_current:hover {
+    cursor: pointer;
+    border: rgba(201, 57, 214, 0.753) 1px solid;
+}
+
+.info-bar-drop-down {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    justify-self: center;
+    background-color: rgba(251, 251, 251, 0.900);
+    padding: 10px;
+    border: black solid 2px;
+    border-radius: 50% 0% 0% 50% / 100% 100% 0% 100% ;
+    position: relative;
+    grid-row-gap: calc(1vh + 2vw + .5vmin);
+}
+
+.info-bar-drop-down * {
+    border-radius: 5%;
+    border: black solid 2px;
+    background-color: rgba(0, 0, 0, .850);
+    font-size: calc(1vh + 2vw + .5vmin);
+    justify-self: end;
+    align-self: center;
+}
+
+.list-item {
+    padding: 5px;
+}
+
+
+.info-bar-drop-down li:hover {
+    color: rgba(201, 57, 214, 0.753);
+}
+
+.profile {
+    grid-row: 1 / 2;
+}
+
+.my-poem-pocket {
+    grid-row: 2 / 3;
+}
+
+.current {
+    grid-row: 3 / 4;
+}
+
+.info-bar-drop-down > button {
+    color: white;
+}
+
+.info-bar-drop-down > button:hover {
+    color: rgba(214, 57, 57, 0.753);
+}
+

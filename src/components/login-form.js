@@ -10,13 +10,8 @@ export class LoginForm extends React.Component {
     }
 
     render() {
-        let error;
         if (this.props.error) {
-            error = (
-                <div className="form-error" aria-live="polite">
-                    {this.props.error}
-                </div>
-            );
+            alert(`${this.props.error}` );
         }
         return (
             <form
@@ -24,8 +19,7 @@ export class LoginForm extends React.Component {
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}>
-                {error}
-                <label className="label" htmlFor="username">Username</label>
+                <label htmlFor="username">Username</label>
                 <Field
                     component={Input}
                     type="text"
@@ -33,7 +27,7 @@ export class LoginForm extends React.Component {
                     id="username"
                     validate={[required, nonEmpty]}
                 />
-                <label className="label" htmlFor="password">Password</label>
+                <label htmlFor="password">Password</label>
                 <Field
                     component={Input}
                     type="password"
@@ -42,7 +36,7 @@ export class LoginForm extends React.Component {
                     validate={[required, nonEmpty]}
                 />
                 <button disabled={this.props.pristine || this.props.submitting}>
-                    Submit
+                    Login
                 </button>
             </form>
         );

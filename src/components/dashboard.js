@@ -1,25 +1,42 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchProtectedData} from '../actions/protected-data';
+import {fetchPoems} from '../actions/poems';
+
+import PoemCreatorPage from './poem-creator-page';
+
+import './dashboard.css';
 
 export class Dashboard extends React.Component {
     componentDidMount() {
-        this.props.dispatch(fetchProtectedData());
+        this.props.dispatch(fetchPoems());
     }
 
-    render() {
-        return (
-            <div className="dashboard">
-                <div className="dashboard-username">
-                    Username: {this.props.username}
-                </div>
-                <div className="dashboard-name">Name: {this.props.name}</div>
-                <div className="dashboard-protected-data">
-                    Protected data: {this.props.protectedData}
-                </div>
-            </div>
+    renderResults() {
+        const stanzaListItems = this.props.stanzas.map((stanzas, index) =>
+            <li key={index}><p className="stanza-number">{index + 1}</p><p className="stanza-text">{stanzas[0]}</p><p className="stanza-author">by: {stanzas[2]}</p></li>
         );
+
+        
+        return stanzaListItems;
+    }
+
+
+    render() {
+        if (this.props.loading === false) {
+            return (
+                <div className="dashboard">
+                    <PoemCreatorPage poemTitle={this.props.title} poemStanzas={this.renderResults()}></PoemCreatorPage>
+                </div>
+            );
+        } else {
+            return (
+                <div className="dashboard">
+                    Loading ...
+                </div>
+            );
+        }
+        
     }
 }
 
@@ -28,7 +45,9 @@ const mapStateToProps = state => {
     return {
         username: state.auth.currentUser.username,
         name: `${currentUser.firstName} ${currentUser.lastName}`,
-        protectedData: state.protectedData.data
+        title: state.poems.data.title,
+        stanzas: state.poems.data.stanzas,
+        loading: state.addStanza.loading
     };
 };
 
