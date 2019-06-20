@@ -26,13 +26,13 @@
     justify-self: center;
     align-self: center;
     border-radius: 5%;
-    width: 95%;
     grid-auto-flow: row;
     grid-auto-rows: auto;
+    padding: 5px;
 }
 
 .poem-stanza-list li {
-    font-size: calc(2vw + 1.7vh + 1vmin);
+    font-size: calc(1.7vw + 1.7vh + 1vmin);
     justify-self: stretch;
     align-self: stretch;
     display: grid;
@@ -41,14 +41,13 @@
     border-bottom: 1px white dotted;
     border-top: 1px white dotted;
     border-radius: 5%;
-    grid-column-gap: 1%;
 }
 
 .stanza-number {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-    justify-self: end;
     align-self: center;
+    justify-self: center;
     display: grid;
 }
 
