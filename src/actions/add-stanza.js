@@ -22,7 +22,7 @@ export const addStanzaError = error => ({
 export const addStanza = (authorArg, textArg) => (dispatch, getState) => {
     dispatch(addStanzaRequest());
     const authToken = getState().auth.authToken;
-    return fetch(`${API_BASE_URL}/poems/stanza`, {
+    return fetch(`${API_BASE_URL}/api/poems/stanza`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

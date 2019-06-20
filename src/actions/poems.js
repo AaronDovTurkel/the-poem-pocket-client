@@ -18,7 +18,7 @@ export const fetchPoemsError = (error) => ({
 
 export const fetchPoems = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
-    return fetch(`${API_BASE_URL}/poems/title`, {
+    return fetch(`${API_BASE_URL}/api/poems/title`, {
         method: 'GET',
         headers: {
             // Provide our auth token as credentials
