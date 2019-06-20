@@ -25,7 +25,7 @@ body {
 
 #root {
   display: grid;
-  grid-template-columns: 10% auto 10%;
+  grid-template-columns: 1fr 10fr 1fr;
 }
 
 
