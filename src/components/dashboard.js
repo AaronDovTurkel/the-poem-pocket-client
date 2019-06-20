@@ -14,7 +14,7 @@ export class Dashboard extends React.Component {
 
     renderResults() {
         const stanzaListItems = this.props.stanzas.map((stanzas, index) =>
-            <li key={index}><p className="stanza-number">{index + 1}</p><p className="stanza-text">{stanzas[0]}</p><p className="stanza-author">by: {stanzas[2]}</p></li>
+            <li key={index}><p className="stanza-number">{index + 1}</p><p className="stanza-text">{stanzas[0]}</p><p className="stanza-author">By: {stanzas[2]}</p></li>
         );
 
         

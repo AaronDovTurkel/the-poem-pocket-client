@@ -55,7 +55,7 @@
 .stanza-text {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
-    justify-self: center;
+    justify-self: stretch;
     align-self: center;
     display: grid;
     border-left: 1px white dotted;
@@ -95,6 +95,7 @@
 .form-input > input {
     justify-self: stretch;
     align-self: stretch;
+    width: 40vw;
     border: transparent;
 }
 

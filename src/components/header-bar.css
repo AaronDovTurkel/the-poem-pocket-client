@@ -22,15 +22,15 @@
 .info-bar {
     display: grid;
     grid-template-rows: auto auto;
-    grid-row-gap: calc(4vh + 5vw + 2vmin);
+    grid-row-gap: calc(4vh + 4vw + 2vmin);
     position: fixed;
     right: 0px;
-    top: 0px;
+    top: 0;
 }
 
 .profile_img_current {
     grid-row: 1 / 2;
-    height: calc(4vh + 4vw + 1vmin);
+    height: calc(3.5vh + 3.5vw + 1vmin);
     width: auto;
     justify-self: center;
     align-self: center;
@@ -38,16 +38,18 @@
     position: absolute;
     right: 0px;
     top: 0px;
-    background-color: rgba(12, 11, 12, 0.6);
+    border: black 2px solid;
+    background-color: rgba(251, 251, 251, 0.900);
+    box-shadow: 15px 10px 10px #2c2a2a;
 }
 
 .clicked {
-    border: rgba(201, 57, 214, 0.753) 1px solid;
+    border: rgba(201, 57, 214, 0.753) 2px solid;
 }
 
 .profile_img_current:hover {
     cursor: pointer;
-    border: rgba(201, 57, 214, 0.753) 1px solid;
+    border: rgba(201, 57, 214, 0.753) 2px solid;
 }
 
 .info-bar-drop-down {

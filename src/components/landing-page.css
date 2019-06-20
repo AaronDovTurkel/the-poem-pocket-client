@@ -3,20 +3,21 @@
     align-self: stretch;
     display: grid;
     grid-template-rows: auto auto;
+    grid-template-columns: 2% auto 2%;
+    grid-column-gap: space-between;
 }
 
 
 .login-form {
     grid-row: 1 / 2;
+    grid-column: 2 / 3;
     justify-self: center;
     align-self: center;
-    width: 95%;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 2fr;
     grid-row-gap: 5%;
-    grid-column-gap: 5%;
-
+    grid-column-gap: 3%;
 }
 
 .login-form label {
@@ -29,13 +30,16 @@
 
 .login-form div {
     grid-column: 2 / 3;
-    justify-self: center;
+    justify-self: stretch;
+    align-self: stretch;
     display: grid;
-    padding-bottom: 3px;
 }
 
 .form-input > input {
-    padding-left: 3px;
+    padding: 3px;
+    font-size: calc(1.5vw + 1.5vh + .5vmin);
+    justify-self: center;
+    align-self: center
 }
 
 .login-form > button {
@@ -58,7 +62,9 @@
     color: rgba(201, 57, 214, 0.753)
 }
 
-.home > a {
+.home > div {
     grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    font-size: calc(1.5vw + 1.5vh + .5vmin);
 }
 

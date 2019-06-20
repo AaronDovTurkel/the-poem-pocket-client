@@ -1,7 +1,7 @@
 .app {
     align-self: center;
-    justify-self: center;
-    width: 75%;
+    justify-self: stretch;
+    grid-column: 2 / 3;
     box-shadow: 10px 10px 25px 5px rgba(0, 0, 0, .500);
     text-align: center;
     background-image: url('https://crossroadscafejtree.com/wp-content/uploads/2016/01/chalkboard.jpg');

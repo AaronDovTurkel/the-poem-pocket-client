@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Mali', cursive;
 }
 
 html {
@@ -23,6 +23,10 @@ body {
   background-size: cover;
 }
 
+#root {
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+}
 
 h1 a {
   text-decoration: none;

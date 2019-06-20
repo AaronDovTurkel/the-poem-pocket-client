@@ -4,7 +4,7 @@
     justify-self: center;
     align-self: center;
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto 5px;
 }
 
 .info-content {
@@ -22,7 +22,7 @@
 }
 
 .register-link > a {
-    font-size: calc(2vh + 2vw + .5vmin);
+    font-size: calc(2.2vh + 2.2vw + .5vmin);
 }
 
 .log-in-link {
@@ -32,5 +32,5 @@
 }
 
 .log-in-link > a {
-    font-size: calc(1.5vh + 1.5vw + .5vmin);
+    font-size: calc(2vh + 2vw + .5vmin);
 }
