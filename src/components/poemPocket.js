@@ -7,18 +7,14 @@ import PoemCreatorPage from './poem-creator-page';
 
 import './dashboard.css';
 
-export class Dashboard extends React.Component {
+export class PoemPocket extends React.Component {
     componentDidMount() {
         this.props.dispatch(fetchPoems());
     }
 
     renderResults() {
         const stanzaListItems = this.props.stanzas.map((stanzas, index) =>
-        <tr key={index}>
-            <td className="stanza-number">{index + 1}</td>
-            <td className="stanza-text">{stanzas[0]}</td>
-            <td className="stanza-author">{stanzas[2]}</td>
-        </tr>
+            <li key={index}><p className="stanza-number">{index + 1}</p><p className="stanza-text">{stanzas[0]}</p><p className="stanza-author">By: {stanzas[2]}</p></li>
         );
 
         
@@ -55,4 +51,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default requiresLogin()(connect(mapStateToProps)(Dashboard));
+export default requiresLogin()(connect(mapStateToProps)(PoemPocket));

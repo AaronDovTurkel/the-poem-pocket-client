@@ -8,7 +8,9 @@
     background-size: cover;
     color: azure;
     display: grid;
+    width: 100%;
     grid-template-rows: auto 5fr;
+    grid-template-columns: 100%;
 }
 
 Header {
@@ -23,4 +25,5 @@ Header {
 Main {
     grid-row: 2 / 3;
     display: grid;
+    grid-template-columns: 100%;
 }

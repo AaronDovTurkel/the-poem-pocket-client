@@ -9,9 +9,14 @@ export class PoemCreatorPage extends React.Component {
         return (
             <div className="poem-creator-page">
                 <h2 className="new-poem-title">{this.props.poemTitle}</h2>
-                <ul className="poem-stanza-list">
+                <table className="poem-stanza-list">
+                    <tr>
+                        <th>#</th>
+                        <th>Stanza</th>
+                        <th>Author</th>
+                    </tr>
                     {this.props.poemStanzas}
-                </ul>
+                </table>
                 <AddForm/>
             </div>
         );
