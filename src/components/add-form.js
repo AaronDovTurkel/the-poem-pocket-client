@@ -23,6 +23,7 @@ export class AddForm extends React.Component {
                 onSubmit={this.props.handleSubmit(values => this.onSubmit(values))
             }>
                 <label className="label" htmlFor="penName">Your name:</label>
+                {/* TODO populate the value with the user name */}
                 <Field
                     component={Input}
                     type="penName"
