@@ -14,7 +14,8 @@
     display: grid;
     grid-column: 1 / 2;
     font-size: calc(2vh + 2vw + 1vmin);
-    text-align: end;
+    justify-self: center;
+    text-align: center;
     padding-bottom: 3px;
 }
 

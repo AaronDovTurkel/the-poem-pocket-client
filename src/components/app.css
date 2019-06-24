@@ -9,16 +9,15 @@
     color: azure;
     display: grid;
     width: 100%;
-    grid-template-rows: auto 5fr;
-    grid-template-columns: 100%;
+    grid-template-rows: .5fr 5fr;
 }
 
 Header {
     grid-row: 1 / 2;
     display: grid;
-    align-self: center;
+    align-self: stretch;
     justify-self: center;
-    padding-bottom: 3px;
+    margin-bottom: 1%;
 }
 
 

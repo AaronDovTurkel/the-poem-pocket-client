@@ -1,10 +1,8 @@
 .site-info-container {
-    height: 100%;
-    width: 95%;
     justify-self: center;
     align-self: center;
     display: grid;
-    grid-template-rows: auto auto auto 5px;
+    grid-template-rows: 10fr 1fr 1fr;
 }
 
 .info-content {
@@ -13,24 +11,34 @@
     align-self: center;
     display: grid;
     font-size: calc(2vh + 2vw + .5vmin);
+    grid-template-rows: auto;
 }
 
 
 .register-link {
+    justify-self: center;
     align-self: center;
     grid-row: 2 / 3;
+    display: grid;
 }
 
 .register-link > a {
     font-size: calc(2.2vh + 2.2vw + .5vmin);
+    justify-self: center;
+    align-self: center;
 }
 
 .log-in-link {
     grid-row: 3 / 4;
     font-size: calc(1.5vh + 1.5vw + .5vmin);
     justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-rows: auto auto;
 }
 
 .log-in-link > a {
     font-size: calc(2vh + 2vw + .5vmin);
+    justify-self: center;
+    align-self: center;
 }

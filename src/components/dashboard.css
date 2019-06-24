@@ -20,6 +20,7 @@
     border-top: 2px white dashed;
     border-bottom: 2px white dashed;
     border-radius: 5%;
+    margin-bottom: 1%;
 }
 
 table {
@@ -28,6 +29,7 @@ table {
     table-layout: fixed;
     width: 100%;
     border-collapse: separate;
+    margin-bottom: 1%;
 }
 
 th, td {
