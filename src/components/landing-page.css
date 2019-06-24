@@ -3,29 +3,28 @@
     align-self: stretch;
     display: grid;
     grid-template-rows: auto auto;
-    grid-template-columns: 2% auto 2%;
-    grid-column-gap: space-between;
+    grid-template-columns: 1fr;
+    grid-gap: space-around;
 }
 
 
 .login-form {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
     justify-self: center;
     align-self: center;
+    grid-row: 1 / 2;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 2fr;
-    grid-row-gap: 5%;
-    grid-column-gap: 3%;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+    grid-gap: 5% 5%;
 }
 
 .login-form label {
     display: grid;
     grid-column: 1 / 2;
-    font-size: calc(2vh + 2vw + 1vmin);
-    justify-self: end;
+    font-size: calc(1.35vh + 2vw + 1vmin);
     padding-bottom: 3px;
+    justify-self: stretch;
+    align-self: stretch;
 }
 
 .login-form div {
@@ -33,13 +32,6 @@
     justify-self: stretch;
     align-self: stretch;
     display: grid;
-}
-
-.form-input > input {
-    padding: 3px;
-    font-size: calc(1.5vw + 1.5vh + .5vmin);
-    justify-self: center;
-    align-self: center
 }
 
 .login-form > button {
@@ -64,7 +56,7 @@
 
 .home > div {
     grid-row: 2 / 3;
-    grid-column: 2 / 3;
-    font-size: calc(1.5vw + 1.5vh + .5vmin);
+    margin: 5%;
+    font-size: calc(1.8vw + 1.8vh + .5vmin);
 }
 

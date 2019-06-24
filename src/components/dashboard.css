@@ -33,12 +33,13 @@ table {
 th, td {
     vertical-align: middle;
     border-radius: 3%;
-    word-wrap:break-word;
 }
 
 th:nth-child(3),  td:nth-child(3) {
-    width: 30%;
+    width: 20%;
     height: auto;
+    word-wrap:break-word;
+    hyphens: auto;
 }
 
 th:nth-child(1), td:nth-child(1) {
@@ -47,7 +48,7 @@ th:nth-child(1), td:nth-child(1) {
 }
 
 td:nth-child(2), th:nth-child(2) {
-    width: 60%;
+    width: 70%;
     height: auto;
 }
 
@@ -84,7 +85,7 @@ td:nth-child(2), th:nth-child(2) {
 }
 
 .form-input > input {
-    width: 45vw;
+    width: 40vw;
     border: white 3px solid;
     border-radius: 5%;
     background: transparent;
