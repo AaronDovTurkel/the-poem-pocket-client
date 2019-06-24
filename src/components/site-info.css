@@ -8,7 +8,7 @@
 .info-content {
     grid-row: 1 / 2;
     justify-self: center;
-    align-self: center;
+    align-self: stretch;
     display: grid;
     font-size: calc(2vh + 2vw + .5vmin);
     grid-template-rows: auto;
