@@ -6,6 +6,10 @@ import HeaderBar from './header-bar';
 import SiteInfo from './site-info';
 import LandingPage from './landing-page';
 import Dashboard from './dashboard';
+import Profile from './profile';
+import PoemPocket from './poemPocket';
+import Connect from './connect';
+
 import RegistrationPage from './registration-page';
 import {refreshAuthToken} from '../actions/auth';
 
@@ -49,8 +53,12 @@ export class App extends React.Component {
                     <main>
                         <Route exact path="/" component={SiteInfo} />
                         <Route exact path="/landing" component={LandingPage} />
-                        <Route exact path="/dashboard" component={Dashboard} />
                         <Route exact path="/register" component={RegistrationPage} />
+                        <Route exact path="/dashboard" component={Dashboard} />
+                        <Route exact path="/profile" component={Profile} />
+                        <Route exact path="/poemPocket" component={PoemPocket} />
+                        <Route exact path="/connect" component={Connect} />
+                        
                     </main>
                 </div>
             </Router>

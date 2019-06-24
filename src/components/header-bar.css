@@ -58,14 +58,14 @@
     grid-template-rows: repeat(auto-fit, 1fr);
     justify-self: center;
     background-color: rgba(251, 251, 251, 0.900);
-    padding: 10px;
+    padding: 15px;
     border: black solid 2px;
     border-radius: 50% 0% 0% 50% / 100% 100% 0% 100% ;
     position: relative;
     grid-row-gap: calc(1vh + 2vw + .5vmin);
 }
 
-.info-bar-drop-down * {
+.info-bar-drop-down > * {
     border-radius: 5%;
     border: black solid 2px;
     background-color: rgba(0, 0, 0, .850);
@@ -75,24 +75,18 @@
 }
 
 .list-item {
-    padding: 5px;
+    padding: 3px;
+}
+
+.list-item a {
+    text-decoration: none;
+    font-size: calc(1vh + 2vw + .5vmin);
+    color: white
 }
 
 
-.info-bar-drop-down li:hover {
+.info-bar-drop-down *:hover {
     color: rgba(201, 57, 214, 0.753);
-}
-
-.profile {
-    grid-row: 1 / 2;
-}
-
-.my-poem-pocket {
-    grid-row: 2 / 3;
-}
-
-.current {
-    grid-row: 3 / 4;
 }
 
 .info-bar-drop-down > button {
