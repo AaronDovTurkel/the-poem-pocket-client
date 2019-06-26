@@ -10,7 +10,8 @@ export class Profile extends React.Component {
     render() {
         if (this.props.loading === false) {
             return (
-                <div className="dashboard">
+                <div className="profilePage">
+                    <h3 className="pageHeader">Profile</h3>
                    <div className="betaAlertPage"><p>We're sorry but this app is still in its beta version.</p><p>The "Profile" functionality will allow you to view and edit your profile info.</p></div>
                 </div>
             );

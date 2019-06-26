@@ -12,35 +12,72 @@ export class PoemPocket extends React.Component {
     }
 
     renderResults() {
-        const stanzaListItems = this.props.poems.map((poems, index) =>
-            <li key={index}>
-                <div>{poems}</div>
-            </li>
-        );
+        const poemPocketList = this.props.poemList.slice(0).reverse().map((poem, index) => {
+            function renderStanzas() {
+                const stanzaListItems = poem.stanzas.map((stanza, indexTwo) => 
+               
+                    <tr key={indexTwo}>
+                        <td>
+                            {indexTwo + 1}
+                        </td>
+                        <td>
+                            {stanza.stanza}
+                        </td>
+                        <td>
+                            {stanza.author}
+                        </td>
+                    </tr>
+                )
+                return stanzaListItems
+            };
 
-        
-        return stanzaListItems;
+            return (
+                <li className="poemPocketListItem" key={index}>
+                    <h3 className="poemPocketListTitle">{poem.title}</h3>
+                    <table className="poemPocketListTable">  
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Stanza</th>
+                                <th>Author</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {renderStanzas()}
+                        </tbody>
+                    </table>
+                    <div> Published on {poem.date.substr(0, 10)}</div>
+                </li>
+            )
+        });
+        return poemPocketList;
     }
 
 
     render() {
-        
-        return (
-            <div className="dashboard">
-                <ul className="poemPocketContainer">
-                    {this.renderResults()}
-                </ul>
-            </div>
-        );
+        if (this.props.loading === false) {
+            return (
+                <div className="poemPocketPageContianer">
+                    <h3 className="pageHeader">My Poem Pocket</h3>
+                    <ul className="poemPocketListContainer">
+                        {this.renderResults()}
+                    </ul>
+                </div>      
+            );
+        } else {
+            return (
+                <div className="poemPocketListContainer">
+                    Loading ...
+                </div>
+            );
+        }
     }
 }
 
 const mapStateToProps = state => {
-    const {currentUser} = state.auth;
     return {
-        username: state.auth.currentUser.username,
-        name: `${currentUser.firstName} ${currentUser.lastName}`,
-        poems: state.poemPocket.data
+        poemList: state.poemPocket.data,
+        loading: state.poemPocket.loading
     };
 };
 

@@ -22,7 +22,7 @@
 .info-bar {
     display: grid;
     grid-template-rows: auto auto;
-    grid-row-gap: calc(4vh + 4vw + 2vmin);
+    grid-row-gap: calc(4vh + 3vw + 2vmin);
     position: fixed;
     right: 0px;
     top: 0;
@@ -57,19 +57,19 @@
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
     justify-self: center;
-    background-color: rgba(251, 251, 251, 0.900);
-    padding: 15px;
+    background-color: rgba(251, 251, 251, 0.950);
+    padding: 15px 15px 15px 5px;
     border: black solid 2px;
     border-radius: 50% 0% 0% 50% / 100% 100% 0% 100% ;
     position: relative;
-    grid-row-gap: calc(1vh + 2vw + .5vmin);
+    grid-row-gap: calc(1.4vh + 1.4vw + .5vmin);
 }
 
 .info-bar-drop-down > * {
     border-radius: 5%;
     border: black solid 2px;
-    background-color: rgba(0, 0, 0, .850);
-    font-size: calc(1vh + 2vw + .5vmin);
+    background-color: rgba(0, 0, 0, 0.85);
+    font-size: calc(1vh + 1.8vw + .5vmin);
     justify-self: end;
     align-self: center;
 }
@@ -80,7 +80,7 @@
 
 .list-item a {
     text-decoration: none;
-    font-size: calc(1vh + 2vw + .5vmin);
+    font-size: calc(1vh + 1.8vw + .5vmin);
     color: white
 }
 

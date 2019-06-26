@@ -1,28 +1,28 @@
 import {
-    FETCH_POEMPOCKET_SUCCESS,
-    FETCH_POEMPOCKET_ERROR,
-    FETCH_POEMPOCKET_REQUEST
-} from '../actions/poemPocket';
+    EDIT_STANZA_SUCCESS,
+    EDIT_STANZA_REQUEST,
+    EDIT_STANZA_ERROR
+} from '../actions/edit-stanza';
 
 const initialState = {
-    data: [],
+    data: null,
     error: null,
     loading: false
 };
 
-export const poemPocketReducer = (state = initialState, action) => {
-    if (action.type === FETCH_POEMPOCKET_SUCCESS) {
+export const editStanzaReducer = (state = initialState, action) => {
+    if (action.type === EDIT_STANZA_SUCCESS) {
         return Object.assign({}, state, {
             data: action.data,
             error: null,
             loading: false
         });
-    } else if (action.type === FETCH_POEMPOCKET_REQUEST) {
+    } else if (action.type === EDIT_STANZA_REQUEST) {
         return Object.assign({}, state, {
             error: action.error,
             loading: true
         });
-    } else if (action.type === FETCH_POEMPOCKET_ERROR) {
+    } else if (action.type === EDIT_STANZA_ERROR) {
         return Object.assign({}, state, {
             error: action.error,
             loading: false

@@ -4,11 +4,189 @@
     grid-template-columns: 100%;
 }
 
+.adminPage {
+    display: grid;
+    grid-template-rows: 10% 5% 85%;
+}
+
+.adminPage > h3 {
+    grid-row: 1 / 2;
+    font-size: calc(1.5vw + 1.5vh + 1vmin);
+}
+
+.adminPage > p {
+    grid-row: 2 / 3;
+    font-size: calc(1vw + 1vh + .5vmin);
+}
+
+.adminPage form {
+    grid-row: 3 / 4;
+    justify-self: center;
+    align-self: start;
+    margin-top: 15%;
+    height: calc(5vw + 5vh + 3vmin);
+    font-size: calc(1.2vw + 1.2vh + .8vmin);
+}
+
+.addPoem-form {
+    display: grid;
+    width: 100%;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 15%;
+}
+
+.addPoem-form > button {
+    background-color: rgba(255, 255, 255, 0.666);
+    color: black;
+    justify-self: center;
+    border-radius: 15%;
+    font-size: calc(1.2vw + 1.2vh + .8vmin);
+}
+
 .poem-creator-page {
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: 100%;
     max-width: 100%;
+}
+
+.poemPocketListContainer {
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(2, auto);
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+    padding: 3%;
+    grid-gap: 1%;
+}
+
+.pageHeader {
+    background-color: rgba(255, 255, 255, 0.333);
+    justify-self: stretch;
+    align-self: start;
+    border-radius: 5%;
+    margin-bottom: 1%;
+    text-shadow:
+		-.5px -.5px 0 #000,
+		.5px -.5px 0 #000,
+		-.5px .5px 0 #000,
+        .5px .5px 0 #000;
+}
+
+@media screen and (max-height: 600px), screen and (max-width: 500px) {
+    .poemPocketListContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+.poemPocketListItem {
+    justify-self: center;
+    align-self: start;
+    width: 100%;
+    height: auto;
+    /**/
+    background-color: rgba(255, 255, 255, 0.333);
+    border-radius: 15px;
+    box-shadow: 10px 10px 25px 5px rgba(0, 0, 0, .500);
+    /**/
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.poemPocketListTitle {
+    grid-row: 1 / 2;
+    align-content: center;
+    justify-self: center;
+    border-bottom: 2px white dashed;
+    border-radius: 5%;
+    margin-bottom: 1%;
+}
+
+.poemPocketListTable {
+    grid-row: 2 / 3;
+    align-content: center;
+    justify-self: center;
+    table-layout: fixed;
+    width: 100%;
+    height: auto;
+    border-collapse: separate;
+    margin-bottom: 1%;
+    word-wrap:break-word;
+    hyphens: auto;
+}
+
+.poemPocketListTable td:nth-child(1),
+.poemPocketListTable td:nth-child(3) {
+    border: 1px dotted white;
+}
+
+.poemPocketListTable td:nth-child(2) {
+    border: 1px solid white;
+}
+
+.poemPocketListTable th:nth-child(3), .poemPocketListTable td:nth-child(3) {
+    width: 15%;
+    height: auto;
+    font-size: calc(.8vw + 1vh + .3vmin);
+}
+
+.poemPocketListTable th:nth-child(1), .poemPocketListTable td:nth-child(1) {
+    width: 5%;
+    height: auto;
+    font-size: calc(.8vw + 1vh + .3vmin);
+}
+
+.poemPocketListTable td:nth-child(2), .poemPocketListTable th:nth-child(2) {
+    width: 80%;
+    height: auto;
+    font-size: calc(1.2vw + 1.4vh + .5vmin);
+}
+
+.editStanzaContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-self: center;
+    align-self: start;
+    margin-top: 15%;
+}
+
+.editStanza-form {
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: center;
+    align-self: center;
+}
+
+.editStanza-form > label {
+    grid-column: 1 / 2;
+    font-size: calc(1.2vw + 1.2vh + .5vmin);
+    justify-self: center;
+    align-self: center;
+}
+
+.editStanza-form > div {
+    grid-column: 2 / 3;
+    justify-self: center;
+    align-self: center;
+}
+
+.editStanza-form > button {
+    grid-column: 3 / 4;
+    justify-self: center;
+    align-self: center;
+    border-radius: 15%;
+    font-size: calc(1.2vw + 1.2vh + .5vmin);
+}
+
+.cancelEditorButton {
+    grid-row: 2 / 3;
+    justify-self: stretch;
+    align-self: center;
+    font-size: calc(1.2vw + 1.2vh + .5vmin);
+    margin: 5%;
+    border-radius: 5%;
 }
 
 .new-poem-title {
@@ -27,6 +205,8 @@
     justify-self: center;
     align-self: center;
     font-size: calc(2.8vw + 2.8vh + 1.8vmin);
+    background-color: rgba(255, 255, 255, 0.333);
+    border-radius: 5%;
 }
 
 table {
@@ -39,6 +219,7 @@ table {
     margin-bottom: 1%;
     word-wrap:break-word;
     hyphens: auto;
+    padding: 1%;
 }
 
 th, td {
@@ -66,10 +247,17 @@ td:nth-child(2), th:nth-child(2) {
     font-size: calc(1vw + 1vh + 1vmin);
     border: 1px dotted white;
 }
+
 .poem-stanza-list td:nth-child(2) {
     font-size: calc(1.7vw + 1.7vh + 1vmin);
     border: 1px solid white;
 } 
+
+.poem-stanza-list th:nth-child(1),
+.poem-stanza-list th:nth-child(2),
+.poem-stanza-list th:nth-child(3) {
+    font-size: calc(.8vw + .8vh + 1vmin);
+}
 
 
 .addStanza-form {

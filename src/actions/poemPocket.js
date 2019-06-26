@@ -7,6 +7,11 @@ export const fetchPoemPocketSuccess = (dataArg) => ({
     data: dataArg
 });
 
+export const FETCH_POEMPOCKET_REQUEST = 'FETCH_POEMPOCKET_REQUEST';
+export const poemPocketRequest = () => ({
+    type: FETCH_POEMPOCKET_REQUEST
+});
+
 export const FETCH_POEMPOCKET_ERROR = 'FETCH_POEMPOCKET_ERROR';
 export const fetchPoemPocketError = (error) => ({
     type: FETCH_POEMPOCKET_ERROR,
@@ -14,6 +19,7 @@ export const fetchPoemPocketError = (error) => ({
 });
 
 export const fetchPoemPocket = () => (dispatch, getState) => {
+    dispatch(poemPocketRequest);
     const authToken = getState().auth.authToken;
     return fetch(`${API_BASE_URL}/api/poems/poemPocket`, {
         method: 'GET',
@@ -25,7 +31,8 @@ export const fetchPoemPocket = () => (dispatch, getState) => {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then((data) => {
-            console.log(data);
+            console.log(dispatch(fetchPoemPocketSuccess(data)));
+
             dispatch(fetchPoemPocketSuccess(data));
         })
         .catch(err => {

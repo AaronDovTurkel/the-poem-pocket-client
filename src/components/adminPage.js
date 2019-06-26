@@ -2,17 +2,20 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 
+import AddPoem from './addPoem';
+
 import './dashboard.css';
 
-export class Connect extends React.Component {
+export class AdminPage extends React.Component {
 
 
     render() {
         if (this.props.loading === false) {
             return (
-                <div className="connectPage">
-                    <h3 className="pageHeader">Connect</h3>
-                    <div className="betaAlertPage"><p>We're sorry but this app is still in its beta version.</p><p>The "Connect" functionality will allow you to connect with other Poetry Pocket users.</p></div>
+                <div className="adminPage">
+                    <h3 className="pageHeader">Admin Page</h3>
+                    <p>This page is only accessible to administrators.</p>
+                    <AddPoem />
                 </div>
             );
         } else {
@@ -37,4 +40,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default requiresLogin()(connect(mapStateToProps)(Connect));
+export default requiresLogin()(connect(mapStateToProps)(AdminPage));

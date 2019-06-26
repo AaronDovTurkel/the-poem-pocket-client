@@ -1,28 +1,28 @@
 import {
-    FETCH_POEMPOCKET_SUCCESS,
-    FETCH_POEMPOCKET_ERROR,
-    FETCH_POEMPOCKET_REQUEST
-} from '../actions/poemPocket';
+    ADD_POEM_SUCCESS,
+    ADD_POEM_REQUEST,
+    ADD_POEM_ERROR
+} from '../actions/addPoem';
 
 const initialState = {
-    data: [],
+    data: null,
     error: null,
     loading: false
 };
 
-export const poemPocketReducer = (state = initialState, action) => {
-    if (action.type === FETCH_POEMPOCKET_SUCCESS) {
+export const addPoemReducer = (state = initialState, action) => {
+    if (action.type === ADD_POEM_SUCCESS) {
         return Object.assign({}, state, {
             data: action.data,
             error: null,
             loading: false
         });
-    } else if (action.type === FETCH_POEMPOCKET_REQUEST) {
+    } else if (action.type === ADD_POEM_REQUEST) {
         return Object.assign({}, state, {
             error: action.error,
             loading: true
         });
-    } else if (action.type === FETCH_POEMPOCKET_ERROR) {
+    } else if (action.type === ADD_POEM_ERROR) {
         return Object.assign({}, state, {
             error: action.error,
             loading: false

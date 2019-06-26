@@ -2,45 +2,45 @@ import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './utils';
 import {fetchPoems} from '../actions/poems';
 
-export const ADD_STANZA_SUCCESS = 'ADD_STANZA_SUCCESS';
-export const addStanzaSuccess = (data) => ({
-    type: ADD_STANZA_SUCCESS,
+export const EDIT_STANZA_SUCCESS = 'EDIT_STANZA_SUCCESS';
+export const editStanzaSuccess = (data) => ({
+    type: EDIT_STANZA_SUCCESS,
     data
 });
 
-export const ADD_STANZA_REQUEST = 'ADD_STANZA_REQUEST';
-export const addStanzaRequest = () => ({
-    type: ADD_STANZA_REQUEST
+export const EDIT_STANZA_REQUEST = 'EDIT_STANZA_REQUEST';
+export const editStanzaRequest = () => ({
+    type: EDIT_STANZA_REQUEST
 });
 
-export const ADD_STANZA_ERROR = 'ADD_STANZA_ERROR';
-export const addStanzaError = error => ({
-    type: ADD_STANZA_ERROR,
+export const EDIT_STANZA_ERROR = 'EDIT_STANZA_ERROR';
+export const editStanzaError = error => ({
+    type: EDIT_STANZA_ERROR,
     error
 });
 
-export const addStanza = (authorArg, textArg) => (dispatch, getState) => {
-    dispatch(addStanzaRequest());
+export const editStanza = (textArg, idArg) => (dispatch, getState) => {
+    dispatch(editStanzaRequest());
     const authToken = getState().auth.authToken;
     return fetch(`${API_BASE_URL}/api/poems/stanza`, {
-        method: 'POST',
+        method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${authToken}`
         },
         body: JSON.stringify({
-                author: authorArg,
-                stanza: textArg
+                stanza: textArg,
+                id: idArg
             })
         })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then((data) => {
             dispatch(fetchPoems());
-            dispatch(addStanzaSuccess(data));
+            dispatch(editStanzaSuccess(data));
         })
         .catch(err => {
             alert(err.message);
-            dispatch(addStanzaError(err));
+            dispatch(editStanzaError(err));
         });
 };

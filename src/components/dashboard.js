@@ -3,20 +3,63 @@ import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchPoems} from '../actions/poems';
 
+import EditForm  from './edit-form';
 import PoemCreatorPage from './poem-creator-page';
 
 import './dashboard.css';
+
 
 export class Dashboard extends React.Component {
     componentDidMount() {
         this.props.dispatch(fetchPoems());
     }
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            editing: false,
+            idStore: null
+        };
+        this.handler = this.handler.bind(this);
+
+    }
+
+    handler() {
+        this.setState({
+            editing: false
+        })
+      }
+
+    setEditing(editing) {
+        this.setState({
+            editing
+        });
+    }
+
+    setIdStore(idArg) {
+        this.setState({
+            idStore: idArg
+        });
+    }
+
+    onHold(eventArg, idArg) {
+        if (this.props.username === (eventArg.target).nextSibling.innerText) {
+            this.setEditing(true);
+            this.setIdStore(idArg);
+            console.log(`this worked`);
+
+        } else {
+            console.log(`this didn't match`);
+        }
+    }
+
     renderResults() {
+
+        
         const stanzaListItems = this.props.stanzas.map((stanzas, index) =>
         <tr key={index}>
             <td className="stanza-number">{index + 1}</td>
-            <td className="stanza-text">{stanzas[0]}</td>
+            <td className="stanza-text" onMouseUp={(event) => this.onHold(event, stanzas[1])}>{stanzas[0]}</td>
             <td className="stanza-author">{stanzas[2]}</td>
         </tr>
         );
@@ -25,12 +68,11 @@ export class Dashboard extends React.Component {
         return stanzaListItems;
     }
 
-
     render() {
         if (this.props.loading === false) {
             return (
-                <div className="dashboard">
-                    <PoemCreatorPage poemTitle={this.props.title} poemStanzas={this.renderResults()}></PoemCreatorPage>
+                <div className="dashboard"> 
+                    {(!this.state.editing) ? <PoemCreatorPage poemTitle={this.props.title} poemStanzas={this.renderResults()}></PoemCreatorPage>  : <div className="editStanzaContainer"><EditForm handler = {this.handler} id={this.state.idStore}/><button className="cancelEditorButton" onClick={this.handler}>Cancel</button></div>}
                 </div>
             );
         } else {

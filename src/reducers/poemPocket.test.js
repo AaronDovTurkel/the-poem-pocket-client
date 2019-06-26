@@ -7,7 +7,7 @@ describe('poemPocketReducer', () => {
     it('Should set the initial state when nothing is passed in', () => {
         const state = poemPocketReducer(undefined, {type: '__UNKNOWN'});
         expect(state).toEqual({
-            data: '',
+            data: [],
             error: null
         });
     });
@@ -24,7 +24,7 @@ describe('poemPocketReducer', () => {
             state = poemPocketReducer(state, fetchPoemPocket());
             state = poemPocketReducer(state, fetchPoemPocket());
             expect(state).toEqual({
-                data: '',
+                data: [],
                 error: null
             });
         });

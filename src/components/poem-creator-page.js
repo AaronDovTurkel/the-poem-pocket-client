@@ -10,14 +10,18 @@ export class PoemCreatorPage extends React.Component {
             <div className="poem-creator-page">
                 <h2 className="new-poem-title">{this.props.poemTitle}</h2>
                 <table className="poem-stanza-list">
-                    <tr>
-                        <th>#</th>
-                        <th>Stanza</th>
-                        <th>Author</th>
-                    </tr>
-                    {this.props.poemStanzas}
+                    <thead>  
+                        <tr>
+                            <th>#</th>
+                            <th>Stanza</th>
+                            <th>Author</th>
+                        </tr>
+                    </thead> 
+                    <tbody>
+                        {this.props.poemStanzas}
+                    </tbody>
                 </table>
-                <AddForm/>
+                <AddForm user={this.props.username}/>
             </div>
         );
     }
@@ -25,7 +29,8 @@ export class PoemCreatorPage extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    loggedIn: state.auth.currentUser !== null
+    loggedIn: state.auth.currentUser !== null,
+    username: state.auth.currentUser.username
 });
 
 export default connect(mapStateToProps)(PoemCreatorPage);

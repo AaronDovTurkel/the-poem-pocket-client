@@ -9,11 +9,13 @@ import Dashboard from './dashboard';
 import Profile from './profile';
 import PoemPocket from './poemPocket';
 import Connect from './connect';
+import AdminPage from './adminPage';
 
 import RegistrationPage from './registration-page';
 import {refreshAuthToken} from '../actions/auth';
 
 import './app.css';
+
 
 export class App extends React.Component {
     componentDidUpdate(prevProps) {
@@ -58,6 +60,7 @@ export class App extends React.Component {
                         <Route exact path="/profile" component={Profile} />
                         <Route exact path="/poemPocket" component={PoemPocket} />
                         <Route exact path="/connect" component={Connect} />
+                        <Route exact path="/adminPage" component={AdminPage} />
                         
                     </main>
                 </div>

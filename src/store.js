@@ -7,6 +7,8 @@ import {poemReducer} from './reducers/poems';
 import {poemPocketReducer} from './reducers/poemPocket';
 import {addStanzaReducer} from './reducers/add-stanza';
 import {setAuthToken, refreshAuthToken} from './actions/auth';
+import { editStanzaReducer } from './reducers/edit-stanza';
+import { addPoemReducer } from './reducers/addPoem';
 
 const store = createStore(
     combineReducers({
@@ -14,7 +16,9 @@ const store = createStore(
         auth: authReducer,
         poems: poemReducer,
         poemPocket: poemPocketReducer,
-        addStanza: addStanzaReducer
+        addStanza: addStanzaReducer,
+        editSatzna: editStanzaReducer,
+        addPoem: addPoemReducer
     }),
     applyMiddleware(thunk)
 );

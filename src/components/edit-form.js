@@ -1,12 +1,12 @@
 import React from 'react';
 import {Field, reduxForm, focus} from 'redux-form';
 import Input from './input';
-import {addStanza} from '../actions/add-stanza';
+import {editStanza} from '../actions/edit-stanza';
 import {required, nonEmpty} from '../validators';
 
-export class AddForm extends React.Component {
-    onSubmit(userArg, values) {
-        return this.props.dispatch(addStanza(userArg, values.uniqueStanza));
+export class EditForm extends React.Component {
+    onSubmit(newStanza, idArg) {
+        return this.props.dispatch(editStanza(newStanza, idArg));
     }
 
     render() {
@@ -18,10 +18,10 @@ export class AddForm extends React.Component {
         }
         return (
             <form
-                className="addStanza-form"
-                onSubmit={this.props.handleSubmit(values => this.onSubmit(this.props.user, values))
-            }>
-                <label className="label" htmlFor="uniqueStanza">Your stanza:</label>
+                className="editStanza-form"
+                onSubmit={this.props.handleSubmit(values => {this.onSubmit(values.uniqueStanza, this.props.id); this.props.handler()})}
+            >
+                <label className="label" htmlFor="uniqueStanza">Edit your stanza:</label>
                 <Field
                     component={Input}
                     type="text"
@@ -30,7 +30,7 @@ export class AddForm extends React.Component {
                     validate={[required, nonEmpty]}
                     value={error}
                 />
-                <button disabled={this.props.pristine || this.props.submitting}>
+                <button type="submit" disabled={this.props.pristine || this.props.submitting}>
                     Submit
                 </button>
             </form>
@@ -39,6 +39,6 @@ export class AddForm extends React.Component {
 }
 
 export default reduxForm({
-    form: 'AddForm',
-    onSubmitFail: (errors, dispatch) => dispatch(focus('addStanza', 'uniqueStanza'))
-})(AddForm);
+    form: 'EditForm',
+    onSubmitFail: (errors, dispatch) => dispatch(focus('editStanza', 'uniqueStanza'))
+})(EditForm);
