@@ -59,7 +59,7 @@ export class Dashboard extends React.Component {
         const stanzaListItems = this.props.stanzas.map((stanzas, index) =>
         <tr key={index}>
             <td className="stanza-number">{index + 1}</td>
-            <td className="stanza-text" onMouseUp={(event) => this.onHold(event, stanzas[1])}>{stanzas[0]}</td>
+            <td className="stanza-text" onTouchEnd={(event) => this.onHold(event, stanzas[1])}>{stanzas[0]}</td>
             <td className="stanza-author">{stanzas[2]}</td>
         </tr>
         );
