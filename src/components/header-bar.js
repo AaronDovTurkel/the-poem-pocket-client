@@ -27,7 +27,6 @@ export class HeaderBar extends React.Component {
                 </div>
             );
         }
-        console.log(this.props.username.username)
         return (
             <div className="header-bar">
                 <Link to="/">The Poetry Pocket</Link>

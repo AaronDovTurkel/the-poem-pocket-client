@@ -31,8 +31,6 @@ export const fetchPoemPocket = () => (dispatch, getState) => {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then((data) => {
-            console.log(dispatch(fetchPoemPocketSuccess(data)));
-
             dispatch(fetchPoemPocketSuccess(data));
         })
         .catch(err => {

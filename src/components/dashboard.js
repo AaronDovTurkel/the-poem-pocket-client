@@ -55,11 +55,8 @@ export class Dashboard extends React.Component {
         if (this.props.username === userArg) {
             this.setState({
                 editing: true
-            });;
-            console.log(`this worked`);
+            });
 
-        } else {
-            console.log(`this didn't match`);
         }
     }
 
