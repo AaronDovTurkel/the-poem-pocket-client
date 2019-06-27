@@ -1,12 +1,12 @@
 <p align="center"><img width=20% height=20% src=public/img_store/mdb_logo.png></p>
 
-<p align="center">Welcome to <a href="https://mighty-fortress-82471.herokuapp.com/dashboard">"The Poetry Pocket"</a>,This is a place for different communities to come togther and share ideas by creating a cohesive poem.</p>
+<p align="center">Welcome to <a href="https://mighty-fortress-82471.herokuapp.com/dashboard">"The Poetry Pocket"</a>, a place for different communities to come togther and share ideas by creating a cohesive poem.</p>
 
-<p>Every day a new poem title with an opening stanza will be posted. On a first-come-first-serve basis, anyone who wishes will have a chance to contribute a stanza to the public poem. The poem will close at midnight and be published to the public viewing board!</p>
+<p align="center">Every day a new poem title with an opening stanza will be posted. On a first-come-first-serve basis, anyone who wishes will have a chance to contribute a stanza to the public poem. The poem will close at midnight and be published to the public viewing board!</p>
 
 ## Usage
 
-AYou can create an account and/or login if you are already a user. The profile image on the top right is your site guide. If you click on it a list of different pages will be display. In the current beta version you can:
+You can create an account and/or login if you are already a user. The profile image on the top right is your site guide. If you click on it a list of different pages will be display. In the current beta version you can:
      * view old poems in "My Poem Pocket"
      * view the current poem of the day and add your own stanza from the "Dashboard"
      * you can "Log Out"
@@ -16,7 +16,7 @@ AYou can create an account and/or login if you are already a user. The profile i
   
 ## Road Map
 
-"The Poetry Pocket" is in its humble beginnings but has lofty goals. 
+<a href="https://mighty-fortress-82471.herokuapp.com/dashboard">"The Poetry Pocket"</a> is in its humble beginnings but has lofty goals. 
 We hope to make the world a bit more peaceful stanza by stanza. With different people contributing from around the world, ideals will be tested, relationships wrought, and preconcieved notions broken.
 
 ~ Features under Construction ~
@@ -28,7 +28,7 @@ We hope to make the world a bit more peaceful stanza by stanza. With different p
         * Favorite some poems
 
 2. "Connect"
-    * The explore tab has high hopes. From here you will be able to search our data base for other users.
+    * The connect tab has high hopes. From here you will be able to search our data base for other users.
         * To connect
         * To see their poem contributions
         * To thumbs up their work
@@ -37,10 +37,10 @@ We hope to make the world a bit more peaceful stanza by stanza. With different p
 
 ### Authors and Acknowledgments
 
-"The Poem Pocket" was created and is currently maintained by Aaron Dov Turkel.
+"The Poem Pocket" was created and is currently maintained by The Holy Coder.
 
 Thanks to my wife for all her help!
 
 #### Support
 
-For support and inquiries please contact the [delevoper](mailto:"theholycoder@gmail.com").
+For support and inquiries please contact the [The Holy Coder](mailto:"theholycoder@gmail.com").
