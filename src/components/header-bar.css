@@ -62,7 +62,7 @@
     border: black solid 2px;
     border-radius: 50% 0% 0% 50% / 100% 100% 0% 100% ;
     position: relative;
-    grid-row-gap: calc(1.4vh + 1.4vw + .5vmin);
+    grid-row-gap: calc(1vh + 1vw + .5vmin);
 }
 
 .info-bar-drop-down > * {
