@@ -7,13 +7,13 @@ import {
 } from '../actions/auth';
 
 const initialState = {
-    authToken: null, // authToken !== null does not mean it has been validated
+    authToken: null, 
     currentUser: null,
     loading: false,
     error: null
 };
 
-export default function reducer(state = initialState, action) {
+export const authReducer = (state = initialState, action) => {
     if (action.type === SET_AUTH_TOKEN) {
         return Object.assign({}, state, {
             authToken: action.authToken

@@ -57,7 +57,7 @@ export class PoemPocket extends React.Component {
     render() {
         if (this.props.loading === false) {
             return (
-                <div className="poemPocketPageContianer">
+                <div className="poemPocketPageContainer">
                     <h3 className="pageHeader">My Poem Pocket</h3>
                     <ul className="poemPocketListContainer">
                         {this.renderResults()}
@@ -66,7 +66,7 @@ export class PoemPocket extends React.Component {
             );
         } else {
             return (
-                <div className="poemPocketListContainer">
+                <div className="poemPocketPageContainer">
                     Loading ...
                 </div>
             );

@@ -2,7 +2,7 @@ import {createStore, applyMiddleware, combineReducers} from 'redux';
 import {reducer as formReducer} from 'redux-form';
 import thunk from 'redux-thunk';
 import {loadAuthToken} from './local-storage';
-import authReducer from './reducers/auth';
+import {authReducer} from './reducers/auth';
 import {poemReducer} from './reducers/poems';
 import {poemPocketReducer} from './reducers/poemPocket';
 import {addStanzaReducer} from './reducers/add-stanza';

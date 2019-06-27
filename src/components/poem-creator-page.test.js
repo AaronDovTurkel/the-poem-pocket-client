@@ -2,8 +2,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 
 import {PoemCreatorPage} from './poem-creator-page';
-import requiresLogin from './requires-login';
-import {fetchPoems} from '../actions/poems';
 
 
 describe('<PoemCreatorPage/>', () => {
@@ -34,10 +32,10 @@ describe('<PoemCreatorPage/>', () => {
     it('Renders the title', () => {
         const dispatch = jest.fn();
         const stanzaList = seedLists.map((stanzas, index) =>
-        <li key={index}><p className="stanza-number">{index + 1}.</p><p className="stanza-text">{stanzas.stanza}</p><p className="stanza-author">by: {stanzas.author}</p></li>);;
+        <tr key={index}><td className="stanza-number">{index + 1}.</td><td className="stanza-text">{stanzas.stanza}</td><td className="stanza-author">{stanzas.author}</td></tr>);;
         const wrapper = shallow(
             <PoemCreatorPage poemTitle="Test Title One" poemStanzas={stanzaList} dispatch={dispatch} />
         );
-        expect(wrapper.contains(<ul className="poem-stanza-list">{stanzaList}</ul>)).toEqual(true);
+        expect(wrapper.contains(<table className="poem-stanza-list"><thead><tr><th>#</th><th>Stanza</th><th>Author</th></tr></thead><tbody>{stanzaList}</tbody></table>)).toEqual(true);
     });
 });

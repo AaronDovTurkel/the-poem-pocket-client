@@ -1,11 +1,11 @@
-import {addStanzaReducer} from './add-stanza';
-import {addStanza} from '../actions/add-stanza';
+import {editStanzaReducer} from './edit-stanza';
+import { editStanza } from '../actions/edit-stanza';
 
 describe('addStanzaReducer', () => {
 
 
     it('Should set the initial state when nothing is passed in', () => {
-        const state = addStanzaReducer(undefined, {type: '__UNKNOWN'});
+        const state = editStanzaReducer(undefined, {type: '__UNKNOWN'});
         expect(state).toEqual({
             data: null,
             error: null,
@@ -15,14 +15,14 @@ describe('addStanzaReducer', () => {
 
     it('Should return the current state on an unknown action', () => {
         let currentState = {};
-        const state = addStanzaReducer(currentState, {type: '__UNKNOWN'});
+        const state = editStanzaReducer(currentState, {type: '__UNKNOWN'});
         expect(state).toBe(currentState);
     });
 
     describe('addStanza', () => {
         it('Should return empty with out dummy data', () => {
             let state;
-            state = addStanzaReducer(state, addStanza("authorArg", "textArg"));
+            state = editStanzaReducer(state, editStanza("authorArg", "textArg"));
             expect(state).toEqual({
                 data: null,
                 error: null,

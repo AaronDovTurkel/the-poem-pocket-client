@@ -8,7 +8,8 @@ describe('poemPocketReducer', () => {
         const state = poemPocketReducer(undefined, {type: '__UNKNOWN'});
         expect(state).toEqual({
             data: [],
-            error: null
+            error: null,
+            loading: false
         });
     });
 
@@ -22,10 +23,10 @@ describe('poemPocketReducer', () => {
         it('Should return empty with out dummy data', () => {
             let state;
             state = poemPocketReducer(state, fetchPoemPocket());
-            state = poemPocketReducer(state, fetchPoemPocket());
             expect(state).toEqual({
                 data: [],
-                error: null
+                error: null,
+                loading: false
             });
         });
     });

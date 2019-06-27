@@ -1,11 +1,11 @@
-import {addStanzaReducer} from './add-stanza';
-import {addStanza} from '../actions/add-stanza';
+import {addPoemReducer} from './addPoem';
+import {addPoem} from '../actions/addPoem';
 
-describe('addStanzaReducer', () => {
+describe('addPoemReducer', () => {
 
 
     it('Should set the initial state when nothing is passed in', () => {
-        const state = addStanzaReducer(undefined, {type: '__UNKNOWN'});
+        const state = addPoemReducer(undefined, {type: '__UNKNOWN'});
         expect(state).toEqual({
             data: null,
             error: null,
@@ -15,14 +15,14 @@ describe('addStanzaReducer', () => {
 
     it('Should return the current state on an unknown action', () => {
         let currentState = {};
-        const state = addStanzaReducer(currentState, {type: '__UNKNOWN'});
+        const state = addPoemReducer(currentState, {type: '__UNKNOWN'});
         expect(state).toBe(currentState);
     });
 
-    describe('addStanza', () => {
+    describe('addPoem', () => {
         it('Should return empty with out dummy data', () => {
             let state;
-            state = addStanzaReducer(state, addStanza("authorArg", "textArg"));
+            state = addPoemReducer(state, addPoem("textArg"));
             expect(state).toEqual({
                 data: null,
                 error: null,

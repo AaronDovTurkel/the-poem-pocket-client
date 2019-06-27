@@ -8,7 +8,7 @@ export class Profile extends React.Component {
 
 
     render() {
-        if (this.props.loading === false) {
+        if (!this.props.loading) {
             return (
                 <div className="profilePage">
                     <h3 className="pageHeader">Profile</h3>
@@ -17,7 +17,7 @@ export class Profile extends React.Component {
             );
         } else {
             return (
-                <div className="dashboard">
+                <div className="profilePage">
                     Loading ...
                 </div>
             );

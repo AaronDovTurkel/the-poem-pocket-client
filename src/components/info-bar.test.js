@@ -49,10 +49,10 @@ describe('<InfoBar />', () => {
         const wrapper = shallow(<InfoBar />);
         wrapper.simulate('click');
         expect(wrapper.find('ul').childAt(0).type()).toEqual('li');
-        expect(wrapper.find('ul').childAt(0).text()).toEqual('Profile');
+        expect(wrapper.find('ul').childAt(0).text()).toEqual('<Link />');
         expect(wrapper.find('ul').childAt(1).type()).toEqual('li');
-        expect(wrapper.find('ul').childAt(1).text()).toEqual('Poem Pocket');
+        expect(wrapper.find('ul').childAt(1).text()).toEqual('<Link />');
         expect(wrapper.find('ul').childAt(2).type()).toEqual('li');
-        expect(wrapper.find('ul').childAt(2).text()).toEqual('Connect');
+        expect(wrapper.find('ul').childAt(2).text()).toEqual('<Link />');
     });
 });

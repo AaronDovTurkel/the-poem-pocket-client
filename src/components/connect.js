@@ -8,7 +8,7 @@ export class Connect extends React.Component {
 
 
     render() {
-        if (this.props.loading === false) {
+        if (!this.props.loading) {
             return (
                 <div className="connectPage">
                     <h3 className="pageHeader">Connect</h3>
@@ -17,7 +17,7 @@ export class Connect extends React.Component {
             );
         } else {
             return (
-                <div className="dashboard">
+                <div className="connectPage">
                     Loading ...
                 </div>
             );

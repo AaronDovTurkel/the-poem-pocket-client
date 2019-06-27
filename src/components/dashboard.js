@@ -18,17 +18,44 @@ export class Dashboard extends React.Component {
         super(props);
         this.state = {
             editing: false,
-            idStore: null
+            idStore: null,
+            selectedUserEdit: null,
+            clickCount: 0
         };
         this.handler = this.handler.bind(this);
 
+    }
+
+    mobileDoubleClickTimer() {
+        setTimeout(() => {
+            if (this.state.clickCount >= 2) {
+                this.clearCount();
+                this.onHold(this.state.selectedUserEdit, this.state.idStore);
+            } else {
+                this.clearCount();
+            }
+        }, 300);
+    }
+
+    handleIncrement(stanzaText, idArg)  {
+        this.setState({
+             clickCount: this.state.clickCount + 1,
+             selectedUserEdit: (stanzaText.target).nextSibling.innerText,
+             idStore: idArg
+            });
+    }
+
+    clearCount() {
+        this.setState({
+            clickCount: 0
+        });
     }
 
     handler() {
         this.setState({
             editing: false
         })
-      }
+    }
 
     setEditing(editing) {
         this.setState({
@@ -36,16 +63,9 @@ export class Dashboard extends React.Component {
         });
     }
 
-    setIdStore(idArg) {
-        this.setState({
-            idStore: idArg
-        });
-    }
-
-    onHold(eventArg, idArg) {
-        if (this.props.username === (eventArg.target).nextSibling.innerText) {
+    onHold(userArg) {
+        if (this.props.username === userArg) {
             this.setEditing(true);
-            this.setIdStore(idArg);
             console.log(`this worked`);
 
         } else {
@@ -59,7 +79,7 @@ export class Dashboard extends React.Component {
         const stanzaListItems = this.props.stanzas.map((stanzas, index) =>
         <tr key={index}>
             <td className="stanza-number">{index + 1}</td>
-            <td className="stanza-text" onDoubleClick={(event) => this.onHold(event, stanzas[1])} onTouchMove={(event) => this.onHold(event, stanzas[1])}>{stanzas[0]}</td>
+            <td className="stanza-text" onClick={(event) => {this.handleIncrement(event, stanzas[1]); this.mobileDoubleClickTimer()}}>{stanzas[0]}</td>
             <td className="stanza-author">{stanzas[2]}</td>
         </tr>
         );
