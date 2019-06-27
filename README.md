@@ -19,7 +19,44 @@ You can create an account and/or login if you are already a user. The profile im
 4. or (if you are an administrator) add a new poem
      
 <p align="end"><img width=20% height=30% src=public/imgStore/TPPInfoBar.png></p>
-  
+
+## The code
+
+     Frontend: React, Redux
+     
+     Backend: Node.js with Express
+     
+     Database: MongoDB with MLab
+     
+**API Docs**
+----
+
+* **URLs**
+
+     `/api/users/`
+     `/api/auth/`
+     `/api/poems/stanza`
+     `/api/poems/poemPocket`
+     `/api/poems/title`
+
+* **Methods:**
+
+  `GET`
+  `POST`
+  `PUT`
+
+* **Data Params**
+
+  None
+
+* **Success Response:**
+
+  * **Code:** 200 204
+ 
+* **Error Response:**
+
+  * **Code:** 404 500
+
 ## Road Map
 
 <a href="https://mighty-fortress-82471.herokuapp.com/dashboard">"The Poetry Pocket"</a> is in its humble beginnings but has lofty goals. 
