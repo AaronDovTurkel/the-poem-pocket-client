@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center"><img width=20% height=20% src=public/img_store/mdb_logo.png></p>
 
-## Available Scripts
+<p align="center">Welcome to <a href="https://afternoon-cove-68012.herokuapp.com/">"My Design Book"</a>, a hub for streamlining home design for both designers and home owners alike.</p>
 
-In the project directory, you can run:
+## Usage
 
-### `npm start`
+At the current beta stage our app allows you to store pictures in an easy-to-use filing system. Try creating a new home; or maybe a room; and then add a couple of new pictures! (Please use open sourced images. You can try copying the images from <a href="https://unsplash.com/">here</a>).
+1. Located at the top right of the page you will find our "list tab". 
+     * From here you can select the home and room you would like to view and/or edit. 
+     * To delete a picture, home, or room: simply click on the "x" button.
+     * If you click and hold on a home or room name, you will be taken to our editing window. Just type your new name and hit        "submit" to make a change.
+     
+<p align="end"><img width=10% height=10% src=public/img_store/list_tab_mdb.png></p>
+  
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Clicking on the profile image on the top left of the page will bring you back to the main image viewer. 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+<p align="start"><img width=10% height=10% src=public/img_store/profile_img_mdb.png></p>
 
-### `npm test`
+## Road Map
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+"My Design Book" is in its humble beginnings but has lofty goals. 
+We hope to make waves in the design world by creating a socially adept system for designers to find home owners and visa versa. 
+Not only will this app connect people but it will also be the home base for all design needs. 
+Whether you would like to set up a calendar, send an invoice, or store room dimensions "My Design Book" will have it all.
 
-### `npm run build`
+~ Features under Construction ~
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. "Profile"
+    * You will be able to create a full intent-specific profile. 
+    * If you are a home owner you will be able to specificy your needs, or if you are a designer you can present your style.
+    * From the profile page you can update your icon tell us a little about yourself and where you live.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+2. "Projects"
+    * The projects tab now lets you store images in an easy-to-use filing system. But thats just the beginning... You will be       able to...
+        * Create a comment flow on any image.
+        * Create specific folders for sub-projects within rooms.
+        * Tag workers and clients associated with any image.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. "Tasks"
+    * Will handle any event reminders for the day, week, months; each with their own respective task view.
 
-### `npm run eject`
+4. "Calendar"
+    * A full sized calendar where you can make appointments with any workers, designers, or clients associated with your            account.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. "Workers"
+    * A place to tag other accounts to yours.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. "Orders"
+    * A place to view any orders that were made for your projects.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+7. "Billing"
+    * A place to keep track of all your billing needs.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+8. "Explore"
+    * The explore tab has high hopes. From here you will be able to search our data base for other accounts.
+    * If you are a deisgner you will be able to look for home owners in your area and visa versa.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Authors and Acknowledgments
 
-### Code Splitting
+"My Design Book" was created and is currently maintained by Aaron Dov Turkel.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Shout-out to my special friend, RH.
 
-### Analyzing the Bundle Size
+#### Support
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+For support and inquiries please contact the [delevoper](mailto:"theholycoder@gmail.com").
