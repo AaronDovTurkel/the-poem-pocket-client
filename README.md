@@ -1,4 +1,4 @@
-<p align="center"><img width=20% height=20% src=public/img_store/mdb_logo.png></p>
+<p align="center"><img width=20% height=20% src=public/imgStore/TTPTitle.png></p>
 
 <p align="center">Welcome to <a href="https://mighty-fortress-82471.herokuapp.com/dashboard">"The Poetry Pocket"</a>, a place for different communities to come togther and share ideas by creating a cohesive poem.</p>
 
@@ -12,7 +12,7 @@ You can create an account and/or login if you are already a user. The profile im
      * you can "Log Out"
      * or (if you are an administrator) add a new poem
      
-<p align="end"><img width=10% height=10% src=public/img_store/list_tab_mdb.png></p>
+<p align="end"><img width=10% height=10% src=public/imgStore/TTPInfoBar.png></p>
   
 ## Road Map
 
