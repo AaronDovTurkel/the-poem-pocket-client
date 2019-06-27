@@ -4,7 +4,7 @@
 
 <p align="center">Every day a new poem title with an opening stanza will be posted. On a first-come-first-serve basis, anyone who wishes will have a chance to contribute a stanza to the public poem. The poem will close at midnight and be published to the public viewing board!</p>
 
-<p align="center"><img width=33.33% height=30% src=public/imgStore/TPPAdminPage.png></p><p align="center"><img width=33.33% height=30% src=public/imgStore/TPPDashboard.png></p><p align="center"><img width=33.33% height=30% src=public/imgStore/TPPRegisterLogin.png></p>
+<p align="start"><img width=33.33% height=50% src=public/imgStore/TPPAdminPage.png></p><p align="center"><img width=33.33% height=50% src=public/imgStore/TPPDashboard.png></p><p align="end"><img width=33.33% height=50% src=public/imgStore/TPPRegisterLogin.png></p>
 
 ## Usage
 
