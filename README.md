@@ -1,4 +1,4 @@
-<p align="center"><img width=20% height=20% src=public/imgStore/TPPInfoBar.png></p>
+<p align="center"><img width=20% height=20% src=public/imgStore/TPPTitle.png></p>
 
 <p align="center">Welcome to <a href="https://mighty-fortress-82471.herokuapp.com/dashboard">"The Poetry Pocket"</a>, a place for different communities to come togther and share ideas by creating a cohesive poem.</p>
 
