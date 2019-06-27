@@ -101,6 +101,7 @@
     border-bottom: 2px white dashed;
     border-radius: 5%;
     margin-bottom: 1%;
+    font-size: calc(1.3vw + 1.3vh + .8vmin);
 }
 
 .poemPocketListTable {
