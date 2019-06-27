@@ -19,7 +19,7 @@
 
 .register-link {
     justify-self: center;
-    align-self: center;
+    align-self: end;
     grid-row: 2 / 3;
     display: grid;
 }
@@ -27,7 +27,7 @@
 .register-link > a {
     font-size: calc(2.2vh + 2.2vw + .5vmin);
     justify-self: center;
-    align-self: center;
+    align-self: end;
     text-decoration: none;
 }
 
@@ -35,7 +35,7 @@
     grid-row: 3 / 4;
     font-size: calc(1.5vh + 1.5vw + .5vmin);
     justify-self: center;
-    align-self: center;
+    align-self: start;
     display: grid;
     grid-template-rows: auto auto;
 }
@@ -43,6 +43,6 @@
 .log-in-link > a {
     font-size: calc(2vh + 2vw + .5vmin);
     justify-self: center;
-    align-self: center;
+    align-self: start;
     text-decoration: none;
 }
