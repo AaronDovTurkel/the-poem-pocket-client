@@ -7,10 +7,10 @@
 ## Usage
 
 You can create an account and/or login if you are already a user. The profile image on the top right is your site guide. If you click on it a list of different pages will be display. In the current beta version you can:
-     * view old poems in "My Poem Pocket"
-     * view the current poem of the day and add your own stanza from the "Dashboard"
-     * you can "Log Out"
-     * or (if you are an administrator) add a new poem
+     1. view old poems in "My Poem Pocket"
+     2. view the current poem of the day and add your own stanza from the "Dashboard"
+     3. you can "Log Out"
+     4. or (if you are an administrator) add a new poem
      
 <p align="end"><img width=10% height=10% src=public/imgStore/TPPInfoBar.png></p>
   
