@@ -17,6 +17,7 @@
     grid-area: a;
     justify-self: center;
     align-self: center;
+    text-decoration: underline
 }
 
 .info-bar {

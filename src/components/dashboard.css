@@ -9,9 +9,8 @@
     grid-template-rows: 10% 5% 85%;
 }
 
-.adminPage > h3 {
+.adminPage > h2 {
     grid-row: 1 / 2;
-    font-size: calc(1.5vw + 1.5vh + 1vmin);
 }
 
 .adminPage > p {
@@ -67,6 +66,7 @@
     align-self: start;
     border-radius: 5%;
     margin-bottom: 1%;
+    font-size: calc(1.2vw + 1.2vh + 1vmin);
     text-shadow:
 		-.5px -.5px 0 #000,
 		.5px -.5px 0 #000,

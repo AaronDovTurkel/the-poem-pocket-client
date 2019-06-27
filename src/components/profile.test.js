@@ -16,7 +16,7 @@ describe('<Profile />', () => {
 
     it('Renders proper children', () => {
         const wrapper = shallow(<Profile />);
-        expect(wrapper.childAt(0).type()).toEqual('h3');
+        expect(wrapper.childAt(0).type()).toEqual('h2');
         expect(wrapper.childAt(0).hasClass('pageHeader')).toBe(true);
         expect(wrapper.childAt(1).type()).toEqual('div');
         expect(wrapper.childAt(1).hasClass('betaAlertPage')).toBe(true);

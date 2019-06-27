@@ -17,7 +17,7 @@ export function SiteInfo(props) {
                 <br></br>
                 <p>You can create an account and/or login if you are already a user. The profile image on the top right is your site guide. If you click on it a list of different pages will be display. In the current beta version you can: view old poems in "My Poem Pocket", view the current poem of the day and add your own stanza from the "Dashboard", you can "Log Out", or (if you are an administrator) add a new poem.</p>
                 <br></br>
-                <p>As a side note, if you are unhappy with the stanza you submitted; try double-clicking (or if you are on your phone, sliding) the stanza text...</p>
+                <p>As a side note, if you are unhappy with the stanza you submitted; try double-clicking the stanza text...</p>
                 <p>We hope you enjoy!</p>
             </div>
             <div className="register-link"><Link to="/register">Register Now!</Link></div>

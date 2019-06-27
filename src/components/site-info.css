@@ -8,10 +8,12 @@
 .info-content {
     grid-row: 1 / 2;
     justify-self: center;
-    align-self: stretch;
+    align-self: center;
     display: grid;
     font-size: calc(2vh + 2vw + .5vmin);
     grid-template-rows: auto auto auto auto auto auto;
+    color: white;
+    padding: 2%;
 }
 
 
@@ -26,6 +28,7 @@
     font-size: calc(2.2vh + 2.2vw + .5vmin);
     justify-self: center;
     align-self: center;
+    text-decoration: none;
 }
 
 .log-in-link {
@@ -41,4 +44,5 @@
     font-size: calc(2vh + 2vw + .5vmin);
     justify-self: center;
     align-self: center;
+    text-decoration: none;
 }

@@ -11,7 +11,7 @@ export class Profile extends React.Component {
         if (!this.props.loading) {
             return (
                 <div className="profilePage">
-                    <h3 className="pageHeader">Profile</h3>
+                    <h2 className="pageHeader">Profile</h2>
                    <div className="betaAlertPage"><p>We're sorry but this app is still in its beta version.</p><p>The "Profile" functionality will allow you to view and edit your profile info.</p></div>
                 </div>
             );

@@ -11,7 +11,7 @@ export class Connect extends React.Component {
         if (!this.props.loading) {
             return (
                 <div className="connectPage">
-                    <h3 className="pageHeader">Connect</h3>
+                    <h2 className="pageHeader">Connect</h2>
                     <div className="betaAlertPage"><p>We're sorry but this app is still in its beta version.</p><p>The "Connect" functionality will allow you to connect with other Poetry Pocket users.</p></div>
                 </div>
             );

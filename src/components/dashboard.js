@@ -30,7 +30,7 @@ export class Dashboard extends React.Component {
         setTimeout(() => {
             if (this.state.clickCount >= 2) {
                 this.clearCount();
-                this.onHold(this.state.selectedUserEdit, this.state.idStore);
+                this.renderEditor(this.state.selectedUserEdit, this.state.idStore);
             } else {
                 this.clearCount();
             }
@@ -51,26 +51,22 @@ export class Dashboard extends React.Component {
         });
     }
 
-    handler() {
-        this.setState({
-            editing: false
-        })
-    }
-
-    setEditing(editing) {
-        this.setState({
-            editing
-        });
-    }
-
-    onHold(userArg) {
+    renderEditor(userArg) {
         if (this.props.username === userArg) {
-            this.setEditing(true);
+            this.setState({
+                editing: true
+            });;
             console.log(`this worked`);
 
         } else {
             console.log(`this didn't match`);
         }
+    }
+
+    handler() {
+        this.setState({
+            editing: false
+        })
     }
 
     renderResults() {

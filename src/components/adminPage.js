@@ -13,14 +13,14 @@ export class AdminPage extends React.Component {
         if (this.props.loading === false) {
             return (
                 <div className="adminPage">
-                    <h3 className="pageHeader">Admin Page</h3>
+                    <h2 className="pageHeader">Admin Page</h2>
                     <p>This page is only accessible to administrators.</p>
                     <AddPoem />
                 </div>
             );
         } else {
             return (
-                <div className="dashboard">
+                <div className="adminPage">
                     Loading ...
                 </div>
             );
