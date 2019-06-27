@@ -8,7 +8,7 @@
 
 You can create an account and/or login if you are already a user. The profile image on the top right is your site guide. If you click on it a list of different pages will be display. In the current beta version you can:
 
-1. view old poems in "My Poem Pocket"
+1. view old poems in "Poem Pocket"
 
 2. view the current poem of the day and add your own stanza from the "Dashboard"
 
