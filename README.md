@@ -16,7 +16,7 @@ You can create an account and/or login if you are already a user. The profile im
 
 4. or (if you are an administrator) add a new poem
      
-<p align="end"><img width=10% height=10% src=public/imgStore/TPPInfoBar.png></p>
+<p align="end"><img width=20% height=30% src=public/imgStore/TPPInfoBar.png></p>
   
 ## Road Map
 
