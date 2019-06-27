@@ -178,6 +178,9 @@
     align-self: center;
     border-radius: 15%;
     font-size: calc(1.2vw + 1.2vh + .5vmin);
+    background-color: rgba(255, 255, 255, 0.666);
+    color: black;
+
 }
 
 .cancelEditorButton {
@@ -187,6 +190,8 @@
     font-size: calc(1.2vw + 1.2vh + .5vmin);
     margin: 5%;
     border-radius: 5%;
+    background-color: rgba(255, 255, 255, 0.666);
+    color: black;
 }
 
 .new-poem-title {
