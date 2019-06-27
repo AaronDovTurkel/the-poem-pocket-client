@@ -12,7 +12,7 @@ You can create an account and/or login if you are already a user. The profile im
      * you can "Log Out"
      * or (if you are an administrator) add a new poem
      
-<p align="end"><img width=10% height=10% src=public/imgStore/TTPInfoBar.png></p>
+<p align="end"><img width=10% height=10% src=public/imgStore/TPPInfoBar.png></p>
   
 ## Road Map
 
