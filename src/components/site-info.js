@@ -21,21 +21,18 @@ export function SiteInfo(props) {
                 <br></br>
                 <p>We hope you enjoy!</p>
                 <br></br>
-                <p>Try our demo user accounts: 
-                   
-                    <ul>
+                <p>Try our demo user accounts:</p>   
+                <ul>
                     <br></br>
                         <li>Username: demo</li>
                         <li>Password: testing123</li>
-                    </ul>
-                    <br></br>...
-                    <ul>
-                        <li>Username: admin</li>
-                        <li>Password: Soul702People</li>
-                    </ul>
-                    <br></br>
-                    Or,
-                </p>
+                </ul>
+                <br></br>...
+                <ul>
+                    <li>Username: admin</li>
+                    <li>Password: Soul702People</li>
+                </ul>
+                <br></br>
             </div>
             <div className="register-link"><Link to="/register">Register Now!</Link></div>
             <div className="log-in-link">Already have an account? <Link to="/landing">Log In</Link></div>

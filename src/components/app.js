@@ -49,19 +49,21 @@ export class App extends React.Component {
 
     render() {
         return (
-            <div className="app">
-                <header><HeaderBar /></header>
-                <main>
-                    <Route exact path="/" component={SiteInfo} />
-                    <Route exact path="/landing" component={LandingPage} />
-                    <Route exact path="/register" component={RegistrationPage} />
-                    <Route exact path="/dashboard" component={Dashboard} />
-                    <Route exact path="/profile" component={Profile} />
-                    <Route exact path="/poemPocket" component={PoemPocket} />
-                    <Route exact path="/connect" component={Connect} />
-                    <Route exact path="/adminPage" component={AdminPage} />
-                </main>
-            </div>
+            <Router>
+                <div className="app">
+                    <header><HeaderBar /></header>
+                    <main>
+                        <Route exact path="/" component={SiteInfo} />
+                        <Route exact path="/landing" component={LandingPage} />
+                        <Route exact path="/register" component={RegistrationPage} />
+                        <Route exact path="/dashboard" component={Dashboard} />
+                        <Route exact path="/profile" component={Profile} />
+                        <Route exact path="/poemPocket" component={PoemPocket} />
+                        <Route exact path="/connect" component={Connect} />
+                        <Route exact path="/adminPage" component={AdminPage} />
+                    </main>
+                </div>
+            </Router>
         );
     }
 }
