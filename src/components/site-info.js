@@ -11,7 +11,7 @@ export function SiteInfo(props) {
             <div className="info-content">
                 <p>Hi! Welcome to "The Poetry Pocket".</p>
                 <br></br>
-                <p>This is a place for different communities to come togther and share ideas by creating a cohesive poem.</p>
+                <p>This is a place for different communities to come together and share ideas by creating a cohesive poem.</p>
                 <br></br>
                 <p>Every day a new poem title with an opening stanza will be posted. On a first-come-first-serve basis, anyone who wishes will have a chance to contribute a stanza to the public poem. The poem will close at midnight and be published to the public viewing board!</p>
                 <br></br>
