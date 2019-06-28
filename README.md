@@ -1,6 +1,6 @@
 <p align="center"><img width=100% height=30% src=public/imgStore/TPPTitle.png></p>
 
-<p align="center">Welcome to <a href="https://mighty-fortress-82471.herokuapp.com/dashboard">"The Poetry Pocket"</a>, a place for different communities to come togther and share ideas by creating a cohesive poem.</p>
+<p align="center">Welcome to <a href="https://mighty-fortress-82471.herokuapp.com/dashboard">"The Poetry Pocket"</a>, a place for different communities to come together and share ideas by creating a cohesive poem.</p>
 
 <p align="center">Every day a new poem title with an opening stanza will be posted. On a first-come-first-serve basis, anyone who wishes will have a chance to contribute a stanza to the public poem. The poem will close at midnight and be published to the public viewing board!</p>
 
